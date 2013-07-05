@@ -184,54 +184,6 @@ namespace SelfOrganizingMap.Tests
         }
 
         /// <summary>
-        /// This provides a hook into doing a simple test of a self-organizing map by using color data... 
-        /// think of it as the "Hello World" of self-organizing maps.
-        /// </summary>
-        [TestMethod]
-        [Ignore]
-        public void Train_Test()
-        {
-            IList<Vector> trainingData = new List<Vector>();
-
-            ////int colorStep = 80;
-            ////for (int red = 0; red < 255; red += colorStep)
-            ////{
-            ////    for (int green = 0; green < 255; green += colorStep)
-            ////    {
-            ////        for (int blue = 0; blue < 255; blue += colorStep)
-            ////        {
-            ////            trainingData.Add(new Vector { red, green, blue });
-            ////        }
-            ////    }
-            ////}
-
-            ////for (int blue = 0; blue < 255; blue += colorStep)
-            ////{
-            ////    trainingData.Add(new Vector { 0, 0, blue });
-            ////}
-
-            trainingData.Add(new Vector { 200, 10, 34 });
-            trainingData.Add(new Vector { 25, 174, 44 });
-            trainingData.Add(new Vector { 10, 144, 251 });
-            trainingData.Add(new Vector { 144, 111, 241 });
-
-            Map map = new Map(200, 200, 3);
-            map.Train(trainingData);
-
-            Bitmap image = new Bitmap(map.Width, map.Height);
-            for (int x = 0; x < image.Height; ++x)
-            {
-                for (int y = 0; y < image.Width; ++y)
-                {
-                    MapNode mapNode = map[x, y];
-                    image.SetPixel(x, y, Color.FromArgb((int)mapNode.Weights[0], (int)mapNode.Weights[1], (int)mapNode.Weights[2]));
-                }
-            }
-
-            image.Save(@"c:\temp\image.png", ImageFormat.Png);
-        }
-
-        /// <summary>
         /// Validates that the GetBestMatchingNode method throws a meaningful exception
         /// if given an input vector that is null.
         /// </summary>
