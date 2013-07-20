@@ -17,3 +17,9 @@ Code Features
 
 - Conforms to the "Microsoft All Rules" static [code analysis](http://msdn.microsoft.com/en-us/library/3z0aeatx.aspx) ruleset.
 - Conforms to the [StyleCop](http://stylecop.codeplex.com/) 4.7 ruleset.
+
+Sample
+--
+
+The sample follows the "hello world" of self-organizing maps by producing a color 
+pallet where the colors are randomized and then organized via a self-organizing map.
