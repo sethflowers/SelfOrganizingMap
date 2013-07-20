@@ -23,3 +23,6 @@ Sample
 
 The sample follows the "hello world" of self-organizing maps by producing a color 
 pallet where the colors are randomized and then organized via a self-organizing map.
+
+An example of the output looks like the following image:
+![image](https://github.com/sethflowers/SelfOrganizingMap/blob/master/Sample/ColorSOM/Example.png)
